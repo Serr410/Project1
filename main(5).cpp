@@ -9,12 +9,12 @@ void calc(string a, string b, int x, int y) {
 	vector<int> veca, vecb;
 	int an = 0, bn = 0, copy;
 	for (char& c : a) {         //Initial creation of vector
-		if (x == 0) {
-			veca.push_back(1);
-			break;
-		} else if (c < 48 || c > 57) {
+		if (c < 48 || c > 57) {
 			cout << "Invalid data. Error. If for some reason you decide to use fractional numbers, letters or other symbols, restart program and exclude them from input.";
 			exit(0);
+		} else if (x == 0) {
+			veca.push_back(1);
+			break;
 		} else if (veca.size() == 1 && veca[0] == 0) {
 		    veca[0] = c - '0';
 		    an = c - '0';
@@ -24,12 +24,12 @@ void calc(string a, string b, int x, int y) {
 		}
 	}
 	for (char& c : b) {
-		if (y == 0) {
-			vecb.push_back(1);
-			break;
-		} else if (c < 48 || c > 57) {
+		if (c < 48 || c > 57) {
 			cout << "Invalid data. Error. If for some reason you decide to use fractional numbers, letters or other symbols, restart program and exclude them from input.";
 			exit(0);
+		} else if (y == 0) {
+			vecb.push_back(1);
+			break;
 		} else if (vecb.size() == 1 && vecb[0] == 0) {
 		    vecb[0] = c - '0';
 		    bn = c - '0';
